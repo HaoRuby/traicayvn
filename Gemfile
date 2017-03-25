@@ -49,3 +49,5 @@ gem 'spree', '~> 3.1.0.rc1'
 gem 'spree_auth_devise', '~> 3.1.0.rc1'
 gem 'spree_gateway', '~> 3.1.0.rc1'
 
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
+
