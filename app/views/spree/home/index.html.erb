@@ -1,6 +1,6 @@
 <% content_for :banner do %>
   <%#= render :partial => 'slide' %>
-  <%#= render partial: 'spree/shared/slider', 
+  <%= render partial: 'spree/shared/slider', 
               locals: { slider: Spree::Slide.published, cid: 'home', interval: false } %>
 <% end %>
 <% content_for :sidebar do %>
