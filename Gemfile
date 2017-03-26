@@ -53,3 +53,4 @@ gem 'spree_gateway', '~> 3.1.0.rc1'
 gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
 gem 'spree_slider', github: 'spree-contrib/spree_slider'
 
+gem 'rails_12factor', group: :production
