@@ -1,39 +1,30 @@
+<% info = Spree::StoreInfo.first  %>
+<% store = Spree::Store.current  %>
 <div class="footer-left">
+  <% if info.logo.to_s.empty? %>
+    <%= logo img_option: {class: 'footer-logo'} %>
+  <% else %>
+    <%= link_to image_tag(info.logo, class: 'footer-logo'), spree.root_path  %>
+  <% end %>
 
-  <h3 class="footer-logo">Logo will be here</h3>
-
-  <p class="footer-links">
-    <a href="#">Home</a>
-    ·
-    <a href="#">Blog</a>
-    ·
-    <a href="#">Pricing</a>
-    ·
-    <a href="#">About</a>
-    ·
-    <a href="#">Faq</a>
-    ·
-    <a href="#">Contact</a>
-  </p>
-
-  <p class="footer-company-name">Company Name &copy; 2017</p>
+  <p class="footer-company-name"><%= store.name %> &copy; 2017</p>
 </div>
 
 <div class="footer-center">
 
   <div>
     <i class="fa fa-map-marker"></i>
-    <p>Address will be here</p>
+    <p><%= info.address %></p>
   </div>
 
   <div>
     <i class="fa fa-phone"></i>
-    <p>Phone number will be here</p>
+    <p>Phone number: <%= info.phone  %></p>
   </div>
 
   <div>
     <i class="fa fa-envelope"></i>
-    <p><a href="mailto:support@company.com">Email will be here</a></p>
+    <p><a href="mailto:support@company.com">Email: <%= store.mail_from_address %></a></p>
   </div>
 
 </div>
@@ -42,7 +33,7 @@
 
   <p class="footer-company-about">
     <span>About the company</span>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsam nemo, voluptates, numquam odit ducimus harum magnam tenetur iste aut, perspiciatis asperiores corrupti et. Asperiores omnis eum est deserunt quis!
+    <%= info.description %>
   </p>
 
   <div class="footer-icons">
