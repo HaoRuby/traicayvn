@@ -2,7 +2,7 @@
   <%= Spree.t(:setting_store_infomation) %>
 <% end %>
 
-<%= form_tag spree.admin_store_info_path(id: 1), method: :put do %>
+<%= form_tag spree.admin_store_info_path(id: 1), method: :put, multipart: true do %>
   <div id="preferences" data-hook>
 
     <fieldset class="general no-border-top">
@@ -25,10 +25,19 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="form-group" data-hook="admin_store_info_description">
               <%= f.label :description %>
-              <%= f.text_field :description, value: @info.description, class: 'form-control'  %>
+              <%= f.text_area :description, value: @info.description, row: 20, class: 'form-control'  %>
+            </div>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" data-hook="admin_store_info_logo">
+              <%= f.label :logo %>
+              <%= f.file_field :logo, class: 'form-control' %>
             </div>
           </div>
         </div>

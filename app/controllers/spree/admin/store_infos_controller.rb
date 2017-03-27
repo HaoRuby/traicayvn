@@ -15,7 +15,7 @@ class Spree::Admin::StoreInfosController < Spree::Admin::BaseController
 	end
 
 	def info_params
-    params.require(:store_info).permit(:address, :phone, :description)
+    params.require(:store_info).permit(:address, :phone, :description, :logo)
   end
 
 end
