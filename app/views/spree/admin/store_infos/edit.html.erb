@@ -1,0 +1,53 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:setting_store_infomation) %>
+<% end %>
+
+<%= form_tag spree.admin_store_info_path(id: 1), method: :put do %>
+  <div id="preferences" data-hook>
+
+    <fieldset class="general no-border-top">
+
+      <%= fields_for :store_info do |f| %>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" data-hook="admin_store_info_address">
+              <%= f.label :address %>
+              <%= f.text_field :address, value: @info.address, class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group" data-hook="admin_store_info_phone">
+              <%= f.label :phone %>
+              <%= f.text_field :phone, value: @info.phone, class: 'form-control'  %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" data-hook="admin_store_info_description">
+              <%= f.label :description %>
+              <%= f.text_field :description, value: @info.description, class: 'form-control'  %>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
+
+      <div class="form-actions" data-hook="buttons">
+        <%= button Spree.t('actions.update'), 'save' %>
+        <span class="or"><%= Spree.t(:or) %></span>
+        <%= button_link_to Spree.t('actions.cancel'), spree.edit_admin_store_info_url(id: 1), icon: 'delete' %>
+      </div>
+
+    </fieldset>
+
+  </div>
+
+<% end %>
+
+<script>
+  $('#store_default_currency').select2();
+  $('#currency').select2();
+</script>

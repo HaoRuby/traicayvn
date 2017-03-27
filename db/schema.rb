@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170325144744) do
+ActiveRecord::Schema.define(version: 20170326142347) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -948,6 +948,14 @@ ActiveRecord::Schema.define(version: 20170325144744) do
   add_index "spree_store_credits", ["originator_id", "originator_type"], name: "spree_store_credits_originator"
   add_index "spree_store_credits", ["type_id"], name: "index_spree_store_credits_on_type_id"
   add_index "spree_store_credits", ["user_id"], name: "index_spree_store_credits_on_user_id"
+
+  create_table "spree_store_infos", force: :cascade do |t|
+    t.string   "address"
+    t.string   "phone"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "spree_stores", force: :cascade do |t|
     t.string   "name"

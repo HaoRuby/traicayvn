@@ -1,0 +1,2 @@
+<!-- insert_bottom "[data-hook='admin_configurations_sidebar_menu']" -->
+<%= configurations_sidebar_menu_item(Spree.t(:store_infomation), spree.edit_admin_store_info_path(id:1)) if can? :manage, Spree::Config %>
