@@ -20,16 +20,16 @@ Spree.user_class = "Spree::User"
 attachment_config = {
 
   s3_credentials: {
-    access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
-    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-    bucket:            ENV['S3_BUCKET_NAME'],
-    s3_region:         ENV['AWS_REGION']
+    access_key_id:     'AKIAICAYLNZVOL4QEO7A',
+    secret_access_key: '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',
+    bucket:            'traicayvn-assets',
+    s3_region:         'us-west-2'
   },
 
   storage:        :s3,
   s3_headers:     { "Cache-Control" => "max-age=31557600" },
   s3_protocol:    "https",
-  bucket:         ENV['S3_BUCKET_NAME'],
+  bucket:         'traicayvn-assets',
   url:            ":s3_domain_url",
 
   styles: {
