@@ -22,7 +22,8 @@ attachment_config = {
   s3_credentials: {
     access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
     secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-    bucket:            ENV['S3_BUCKET_NAME']
+    bucket:            ENV['S3_BUCKET_NAME'],
+    s3_region:         ENV['AWS_REGION']
   },
 
   storage:        :s3,
@@ -38,8 +39,8 @@ attachment_config = {
       large:    "600x600>"
   },
 
-  path:           "/:class/:id/:style/:basename.:extension",
-  default_url:    "/:class/:id/:style/:basename.:extension",
+  path:           "/public/:class/:id/:style/:basename.:extension",
+  default_url:    "/public/:class/:id/:style/:basename.:extension",
   default_style:  "product"
 }
 
