@@ -1,10 +1,10 @@
 <% info = Spree::StoreInfo.first  %>
 <% store = Spree::Store.current  %>
 <div class="footer-left">
-  <% if info.logo.to_s.empty? %>
+  <% if info.logo.url.to_s.empty? %>
     <%= logo img_option: {class: 'footer-logo'} %>
   <% else %>
-    <%= link_to image_tag(info.logo, class: 'footer-logo'), spree.root_path  %>
+    <%= link_to image_tag(info.logo.url, class: 'footer-logo'), spree.root_path  %>
   <% end %>
 
   <p class="footer-company-name"><%= store.name %> &copy; 2017</p>

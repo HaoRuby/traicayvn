@@ -4,10 +4,10 @@
     <div class="container">
       <div class="row">
         <figure id="logo" class="col-md-4 col-sm-3" data-hook>
-          <% if info.logo.to_s.empty? %>
-            <%= logo img_option: {class: 'footer-logo'} %>
+          <% if info.logo.url.to_s.empty? %>
+            <%= logo %>
           <% else %>
-            <%= link_to image_tag(info.logo, class: 'footer-logo'), spree.root_path  %>
+            <%= link_to image_tag(info.logo.url), spree.root_path  %>
           <% end %>
         </figure>
         <%= render :partial => 'spree/shared/nav_bar' %>
