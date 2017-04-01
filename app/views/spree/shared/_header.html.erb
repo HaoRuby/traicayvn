@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <figure id="logo" class="col-md-4 col-sm-3" data-hook>
-          <% if info.logo.url.to_s.empty? %>
+          <% if info.logo.to_s.empty? %>
             <%= logo %>
           <% else %>
             <%= link_to image_tag(info.logo.url), spree.root_path  %>
