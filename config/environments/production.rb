@@ -83,11 +83,11 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true  
   config.action_mailer.default :charset => "utf-8"  
   config.action_mailer.smtp_settings = {      
-                                          :address => "smtp.gmail.com",      
+                                          :address => "smtp.mailgun.org",      
                                           :port => 587,      
-                                          :domain => 'gmail.com',      
-                                          :user_name => "haonguyen4993@gmail.com",      
-                                          :password => "hanhdong6090",      
+                                          :domain => 'sandbox12938b72d6654d98b8965b4a2b8c2f8b.mailgun.org',      
+                                          :user_name => "postmaster@sandbox12938b72d6654d98b8965b4a2b8c2f8b.mailgun.org",      
+                                          :password => "926087edfbda57b5e3b440e8fdc2a817",      
                                           :authentication => :plain,      
                                           :enable_starttls_auto => true  }
 end
