@@ -3,10 +3,12 @@
   <%= render partial: 'spree/shared/slider', 
               locals: { slider: Spree::Slide.published, cid: 'home', interval: false } %>
 <% end %>
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-  </div>
+
+<%# hide sidebar %>
+<%# content_for :sidebar do %>
+  <%#div data-hook="homepage_sidebar_navigation">
+    <%#= render :partial => 'spree/shared/taxonomies' %>
+  <%#/div>
 <% end %>
 
 <div data-hook="homepage_products">
