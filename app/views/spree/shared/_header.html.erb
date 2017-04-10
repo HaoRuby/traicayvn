@@ -1,13 +1,14 @@
 <% info = Spree::StoreInfo.first %>
+<% store = Spree::Store.current %>
 <div id="spree-header">
   <header id="header" data-hook>
     <div class="container">
       <div class="row">
-        <figure id="logo" class="col-md-4 col-sm-3" data-hook>
+        <figure id="logo" class="col-sm-3" data-hook>
           <% if info.logo.size.to_s.empty? %>
-            <%= logo %>
+          <%= logo %>
           <% else %>
-            <%= link_to image_tag(info.logo.url), spree.root_path  %>
+          <%= link_to image_tag(info.logo.url), spree.root_path  %>
           <% end %>
         </figure>
         <%= render :partial => 'spree/shared/nav_bar' %>
@@ -15,6 +16,24 @@
     </div>
   </header>
   <div class="container">
-    <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
+    <div class="row" id="nav-contact">
+      <div class="col-xs-6 text-left" id="contact-top">
+        <ul>
+          <li><i class="fa fa-envelope color"></i><a href="#"><%= store.mail_from_address %></a></li>
+          <li><i class="fa fa-phone color"></i><a href="#"><%= info.phone %></a></li>
+        </ul>
+      </div>
+      <div class="col-xs-6 text-right" id="cart">
+        <ul data-hook>
+          <li id="link-to-cart" data-hook>
+            <noscript>
+              <%= link_to Spree.t(:cart), '/cart' %>
+            </noscript>
+            &nbsp;
+          </li>
+          <script>Spree.fetch_cart()</script>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

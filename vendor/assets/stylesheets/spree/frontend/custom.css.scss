@@ -1,3 +1,10 @@
+body {
+	color: #999;
+	font-size: 13px;
+	line-height: 26px;
+	font-family: 'Open Sans', sans-serif;
+}
+
 // header
 #spree-header {
 	background-image: none;
@@ -15,7 +22,54 @@
 		}
 	}
 }
+
 // -------------------------------------------------
+
+//nav-bar
+.navbar-default {
+	margin-top: 70px;
+	background-color: #fff;
+	a {
+		text-transform: uppercase;
+		padding: 20px 15px;
+		font-size: 13px;
+		color: #666 !important;
+		&:hover {
+			background-color: #fff !important;
+			color: #777 !important;
+		}
+	}
+}
+
+#nav-contact {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+#contact-top {
+	ul {
+		list-style: none;
+		margin-bottom: 0px;
+		li {
+			float: left;
+			margin-right: 10px;
+			i {
+				margin-right: 6px;
+			}
+		}
+	}
+}
+
+#cart {
+	ul {
+		list-style: none;
+		margin-bottom: 0px;
+		li {
+			float: right;
+		}
+	}
+}
+//--------------------------------------------------
 
 // slide
 #carousel-slider-home {
