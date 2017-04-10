@@ -12,11 +12,11 @@ class Spree::StoreInfo < ActiveRecord::Base
 										s3_protocol:    "https",
 										bucket:         'traicayvn-assets',
 										url:            ":s3_domain_url",
-										styles: { medium: "300x50>", thumb: "100x100>" },
+										styles: { large: "600x600>", medium: "300x300>", thumb: "100x100>" },
 										path:           "/public/:class/:style/:basename.:extension",
 										default_url:    "/public/:class/:style/:basename.:extension",
 										convert_options: { all: '-strip -auto-orient -colorspace sRGB' },
-										default_style:  "medium"
+										default_style:  "large"
 	validates_attachment :logo, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
 =begin :old
