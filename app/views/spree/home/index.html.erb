@@ -10,7 +10,46 @@
     <%#= render :partial => 'spree/shared/taxonomies' %>
   <%#/div>
 <% end %>
+<div class="text-center greatting">
+  <div class="brand-bg">
+    <a href="#" class="facebook"><i class="fa fa-facebook square-3 rounded-5"></i></a>
+    <a href="#" class="instagram"><i class="fa fa-instagram square-3 rounded-5"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter square-3 rounded-5"></i></a>
+  </div>
+  <br>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  <p>Mollitia optio dolorum sunt libero beatae magni excepturi soluta quidem eligendi perferendis,</p>
+  <p>fuga placeat reprehenderit atque maxime minus, aut, error cumque iusto!</p>
+  <br>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p> A quae inventore exercitationem voluptatem. </p>
+  <p>Voluptatem perferendis obcaecati minus labore consequatur, maxime quae,</p> 
+  <p>quibusdam dolorum mollitia velit expedita consequuntur quis? Hic, id.</p>
+</div>
 
+<div class="text-center feature">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="icon bg-yellow"></div>
+      <h3>Lorem ipsum dolor sit amet</h3>
+      <span>A quae inventore exercitationem voluptatem.</span>
+    </div>
+    <div class="col-sm-4">
+      <div class="icon bg-violet"></div>
+      <h3>Lorem ipsum dolor sit amet</h3>
+      <span>A quae inventore exercitationem voluptatem.</span>
+    </div>
+    <div class="col-sm-4">
+      <div class="icon bg-blue"></div>
+      <h3>Lorem ipsum dolor sit amet</h3>
+      <span>A quae inventore exercitationem voluptatem.</span>
+    </div>
+  </div>
+</div>
+
+<div class="text-center title">
+  <h3><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span></h3>
+</div>
 <div data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
     <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>

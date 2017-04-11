@@ -88,6 +88,86 @@ body {
 	}
 }
 //--------------------------------------------------
+.brand-bg {
+	a {
+		i {
+			font-size: 34px;
+			color: #666;
+			margin-right: 5px;
+			background-color: #dbdbdb;
+			transition: background 2s ease;
+		}
+	}
+	.rounded-5 {
+		border-radius: 100% !important;
+	}
+	.square-3 {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+	}
+	.facebook i:hover {
+		background-color: #134fa0;
+	}
+	.instagram i:hover {
+		background-color: #b35637;
+	}
+	.twitter i:hover {
+		background-color: #188392;
+	}
+}
+
+.feature {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px solid #eee;
+	.icon {
+		width: 130px;
+		height: 130px;
+		line-height: 130px;
+		border-radius: 100%;
+		background-color: #000;
+		margin: 10px auto;
+	}
+	h3 {
+		font-size: 22px;
+		line-height: 37px;
+		width: 70%;
+		margin: 5px auto;
+		color: #666 !important;
+	}
+}
+.bg-yellow {
+	background-color: #E4E152 !important;
+}
+.bg-violet {
+	background-color: #E0E0E0 !important;
+}
+.bg-blue {
+	background-color: #CFE1EB !important;
+}
+
+.title {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 30px;
+	h3 {
+		color: #666;
+		font-size: 22px;
+		line-height: 36px;
+		span {
+			border-bottom: 3px solid #e4e152;
+			padding-bottom:16px;
+		}
+	}
+}
+
+.greatting {
+	p {
+		font-size: 16px;
+	}
+}
 
 // footer
 .footer-distributed{
