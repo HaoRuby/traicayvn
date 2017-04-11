@@ -1,48 +1,36 @@
 <% info = Spree::StoreInfo.first  %>
 <% store = Spree::Store.current  %>
-<div class="footer-left">
-  <% if info.logo.size.to_s.empty? %>
-    <%= logo img_option: {class: 'footer-logo'} %>
-  <% else %>
-    <%= link_to image_tag(info.logo.url, class: 'footer-logo'), spree.root_path  %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <h5>Social Media</h5>
+      <div class="brand-bg">
+        <a href="#" class="facebook text-center"><i class="fa fa-facebook square-3 rounded-5"></i></a>
+        <a href="#" class="twitter text-center"><i class="fa fa-twitter square-3 rounded-5"></i></a>
+        <a href="#" class="instagram text-center"><i class="fa fa-instagram square-3 rounded-5"></i></a>
+      </div>
 
-  <p class="footer-company-name"><%= store.name %> &copy; 2017</p>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <h5>Opening Hours</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ducimus nisi reprehenderit temporibus officia eligendi, dolore adipisci! Esse aut odio culpa quo? Iste impedit, tenetur provident recusandae delectus dolorem cum.</p>
+      <br>
+      <br>
+      <p><%= info.phone %></p>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <h5>Contact traicayvn</h5>
+      <p><i class="fa fa-home"></i>  <%= info.address %></p>
+      <p><i class="fa fa-phone"></i>  <%= info.phone %></p>
+      <p><i class="fa fa-envelope"></i>  <%= store.mail_from_address %></p>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <h5>@INTAGRAM</h5>
+    </div>
+  </div>
 </div>
-
-<div class="footer-center">
-
-  <div>
-    <i class="fa fa-map-marker"></i>
-    <p><%= info.address %></p>
+<div class="bottom-footer">
+  <div class="container">
+    <p class="text-left">Copyright © 2015 - Willow Creek Vineyard | Built by Entice Website Design</p>
   </div>
-
-  <div>
-    <i class="fa fa-phone"></i>
-    <p>Phone number: <%= info.phone  %></p>
-  </div>
-
-  <div>
-    <i class="fa fa-envelope"></i>
-    <p><a href="mailto:support@company.com">Email: <%= store.mail_from_address %></a></p>
-  </div>
-
-</div>
-
-<div class="footer-right">
-
-  <p class="footer-company-about">
-    <span>About the company</span>
-    <%= info.description %>
-  </p>
-
-  <div class="footer-icons">
-
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-github"></i></a>
-
-  </div>
-
 </div>
