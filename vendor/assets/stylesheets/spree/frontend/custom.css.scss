@@ -1,5 +1,5 @@
 body {
-	color: #999;
+	color: #000;
 	font-size: 14px;
 	line-height: 26px;
 	font-family: 'Open Sans', sans-serif;
@@ -151,41 +151,64 @@ body {
 	padding-bottom: 20px;
 	border-top: 1px solid #eee;
 	.icon {
-		width: 130px;
-		height: 130px;
+		width: 135px;
+		height: 135px;
 		line-height: 130px;
 		border-radius: 100%;
-		background-color: #000;
+		background-color: #fff;
 		margin: 10px auto;
+		border: 1px solid #ccc;
 	}
 	h3 {
-		font-size: 22px;
+		font-size: 24px;
+		font-weight: 600;
 		line-height: 37px;
 		width: 70%;
 		margin: 5px auto;
-		color: #666 !important;
+		a {
+		color: #000 !important;
+		&:hover {
+			text-decoration: none;
+		}
+		}
+	}
+	span {
+		font-size: 16px;
+		width: 70%;
+		font-weight: 300;
+		display: block;
+		margin: 5px auto;
 	}
 }
 .bg-yellow {
-	background-color: #E4E152 !important;
+	#background-color: #E4E152 !important;
+	background-image: image-url("foodstore.png");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .bg-violet {
-	background-color: #E0E0E0 !important;
+	#background-color: #E0E0E0 !important;
+	background-image: image-url("buyfruit.png");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .bg-blue {
-	background-color: #CFE1EB !important;
+	#background-color: #CFE1EB !important;
+	background-image: image-url("Fruitclub.png");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .title {
-	border-bottom: 1px solid #eee;
 	margin-bottom: 30px;
 	h3 {
-		color: #666;
-		font-size: 22px;
+		color: #000;
+		font-size: 25px;
 		line-height: 36px;
+		font-weight: 600;
 		span {
-			border-bottom: 3px solid #e4e152;
-			padding-bottom:16px;
+			border-bottom: 2px solid #FF5603;
+			padding-bottom:12px;
 		}
 	}
 }
@@ -196,24 +219,66 @@ body {
 		line-height: 180%;
 		padding-bottom: 40px;
 		color: #000;
-		font-weight: light;
+		font-weight: 300;
 	}
 }
 
 // footer
 #footer {
-	border-top: 3px solid #e4e152;
+	p {
+		margin-bottom: 0px;
+	}
+	border-top: 3px solid #ff5603;
 	margin-top: 30px;
-	padding: 15px 0px;
+	padding: 25px 0px;
 	padding-bottom: 0px;
-	background-color: #666;
-	color: #aaa;
+	background-color: #494949;
+	color: #D8D8D8;
+	.foot-brand {
+		margin-top: 17px;
+		margin-bottom: 30px;
+		margin-left: 12px;
+		a i {
+		color: #D8D8D8;
+		border: 1px solid #d8d8d8;
+		}
+	}
+	.footer-form {
+		.form-group {
+			margin-bottom: 7px;
+		}
+		.form-control {
+			border-radius: 0px;
+		}
+		.btn-default {
+			background-color: #ff5603;
+			color: #fff;
+			border-radius: 0px;
+			border: none;
+		}
+	}
 	.bottom-footer {
+		margin-top: 50px;
 		background-color: #333;
 		padding: 15px 10px 4px;
 		border-top: 1px solid rgba(255, 255, 255, 0.05);
-		font-size: 12px;
+		font-size: 14px;
 		color: #ccc;
+	}
+	h5 {
+		font-weight: 600;
+	}
+	i {
+		margin-right: 5px;
+	}
+	.instagram {
+		h5 {
+			font-size: 16px;
+			font-weight: 700;
+		}
+		.row {
+			margin-bottom: 10px;
+		}
 	}
 }
 //--------------------------------------------------

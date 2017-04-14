@@ -29,28 +29,28 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="icon bg-yellow"></div>
-      <h3>Lorem ipsum dolor sit amet</h3>
+      <h3><a href="/products">Food Store</a></h3>
       <span>A quae inventore exercitationem voluptatem.</span>
     </div>
     <div class="col-sm-4">
       <div class="icon bg-violet"></div>
-      <h3>Lorem ipsum dolor sit amet</h3>
+      <h3><a href="/products">Buy Fruit</a></h3>
       <span>A quae inventore exercitationem voluptatem.</span>
     </div>
     <div class="col-sm-4">
       <div class="icon bg-blue"></div>
-      <h3>Lorem ipsum dolor sit amet</h3>
+      <h3><a href="/products">Fruit Club</a></h3>
       <span>A quae inventore exercitationem voluptatem.</span>
     </div>
   </div>
 </div>
 
 <div class="text-center title">
-  <h3><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span></h3>
+  <h3><span>Our Fresh Fruit</span></h3>
 </div>
 <div data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
-    <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+    <%= render :partial => 'spree/shared/top_products', :locals => { :products => @products } %>
   <% end %>
 </div>
 
