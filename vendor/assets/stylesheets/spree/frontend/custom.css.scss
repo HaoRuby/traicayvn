@@ -1,6 +1,6 @@
 body {
 	color: #999;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 26px;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -8,10 +8,17 @@ body {
 // header
 #spree-header {
 	background-image: none;
-	background-color: #F8F8F8;
+	background-color: #fff;
 	margin-bottom: 0px;
+	#logo {
+		margin-bottom: 0px;
+		margin-top: 7px;
+		margin-left: -6px;
+	}
 	#header {
 		background-color: #fff;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #C4C4C4;
 		a {
 			color: #000;
 		}
@@ -27,34 +34,47 @@ body {
 
 //nav-bar
 .navbar-default {
-	margin-top: 70px;
+	margin-top: 75px;
 	background-color: #fff;
+	padding-right: 0px;
+	.active a {
+		background-color: #fff !important;
+		color: #FF5400 !important;
+	}
 	a {
 		text-transform: uppercase;
 		padding: 20px 15px;
-		font-size: 13px;
-		color: #666 !important;
+		font-size: 14px;
+		color: #000 !important;
 		&:hover {
 			background-color: #fff !important;
-			color: #777 !important;
+			color: #FF5400 !important;
 		}
 	}
 }
 
 #nav-contact {
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 }
 
 #contact-top {
 	ul {
 		list-style: none;
 		margin-bottom: 0px;
+		padding-left: 15px;
 		li {
 			float: left;
 			margin-right: 10px;
+			a {
+				color: #000;
+				&:hover {
+					text-decoration: none;
+				}
+			}
 			i {
-				margin-right: 6px;
+				margin-right: 8px;
+				color: #ff5400;
 			}
 		}
 	}
@@ -75,9 +95,9 @@ body {
 #carousel-slider-home {
 	padding-left: 0px;
 	padding-right: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 27px;
 	.item {
-		height: 400px;
+		height: 470px;
 	}
 	.carousel-caption {
 		p {
@@ -89,23 +109,30 @@ body {
 }
 //--------------------------------------------------
 .brand-bg {
+	margin-bottom: 40px;
 	a {
 		i {
 			font-size: 34px;
 			color: #666;
 			margin-right: 5px;
-			background-color: #dbdbdb;
+			//background-color: #dbdbdb;
 			transition: background 2s ease;
+			&:hover {
+				border: 1px solid #FF5400;
+				color: #ff5400;
+			}
 		}
 	}
 	.rounded-5 {
 		border-radius: 100% !important;
+		border: 1px solid #747577;
 	}
 	.square-3 {
 		width: 60px;
 		height: 60px;
 		line-height: 60px;
 	}
+	/**
 	.facebook i:hover {
 		background-color: #134fa0;
 	}
@@ -114,7 +141,7 @@ body {
 	}
 	.twitter i:hover {
 		background-color: #188392;
-	}
+	}**/
 }
 
 .feature {
@@ -166,6 +193,10 @@ body {
 .greatting {
 	p {
 		font-size: 16px;
+		line-height: 180%;
+		padding-bottom: 40px;
+		color: #000;
+		font-weight: light;
 	}
 }
 
