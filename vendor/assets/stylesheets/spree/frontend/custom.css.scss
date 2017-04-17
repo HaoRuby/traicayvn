@@ -146,7 +146,7 @@ body {
 
 .feature {
 	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-bottom: 90px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-top: 1px solid #eee;
@@ -223,17 +223,42 @@ body {
 	}
 }
 
+// Product panel
+.panel {
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	.panel-body {
+		border: 1px solid #ddd;
+		width: 255px;
+		height: 235px;
+		margin: 0px auto;
+		margin-top: 10px;
+	}
+	.panel-footer {
+		border-top: none;
+		border-bottom: none;
+		background-color: #fff;
+	}
+	.info {
+		font-weight: 600;
+		font-size: 16px;
+	}
+}
+//---------------------------------------------------
+
 // footer
 #footer {
-	p {
-		margin-bottom: 0px;
-	}
+	
 	border-top: 3px solid #ff5603;
-	margin-top: 30px;
+	margin-top: 50px;
 	padding: 25px 0px;
 	padding-bottom: 0px;
 	background-color: #494949;
 	color: #D8D8D8;
+	p {
+		margin-bottom: 0px;
+	}
 	.foot-brand {
 		margin-top: 17px;
 		margin-bottom: 30px;
