@@ -35,7 +35,7 @@ attachment_config = {
   styles: {
       mini:     "48x48>",
       small:    "100x100>",
-      product:  "255x235>",
+      product:  "223x200>",
       large:    "600x600>"
   },
 
