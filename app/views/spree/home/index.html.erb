@@ -10,7 +10,7 @@
     <%#= render :partial => 'spree/shared/taxonomies' %>
   <%#/div>
 <% end %>
-<div class="text-center greatting">
+<div class="container text-center greatting">
   <div class="brand-bg">
     <a href="#" class="facebook"><i class="fa fa-facebook square-3 rounded-5"></i></a>
     <a href="#" class="instagram"><i class="fa fa-instagram square-3 rounded-5"></i></a>
@@ -26,29 +26,31 @@
 </div>
 
 <div class="text-center feature">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="icon bg-yellow"></div>
-      <h3><a href="/products">Food Store</a></h3>
-      <span>A quae inventore exercitationem voluptatem.</span>
-    </div>
-    <div class="col-sm-4">
-      <div class="icon bg-violet"></div>
-      <h3><a href="/products">Buy Fruit</a></h3>
-      <span>A quae inventore exercitationem voluptatem.</span>
-    </div>
-    <div class="col-sm-4">
-      <div class="icon bg-blue"></div>
-      <h3><a href="/products">Fruit Club</a></h3>
-      <span>A quae inventore exercitationem voluptatem.</span>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="icon bg-yellow"></div>
+        <h3><a href="/products">Food Store</a></h3>
+        <span>A quae inventore exercitationem voluptatem.</span>
+      </div>
+      <div class="col-sm-4">
+        <div class="icon bg-violet"></div>
+        <h3><a href="/products">Buy Fruit</a></h3>
+        <span>A quae inventore exercitationem voluptatem.</span>
+      </div>
+      <div class="col-sm-4">
+        <div class="icon bg-blue"></div>
+        <h3><a href="/products">Fruit Club</a></h3>
+        <span>A quae inventore exercitationem voluptatem.</span>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="text-center title">
+<div class="container text-center title">
   <h3><span>Our Fresh Fruit</span></h3>
 </div>
-<div data-hook="homepage_products">
+<div class="container" data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
     <%= render :partial => 'spree/shared/top_products', :locals => { :products => @products } %>
   <% end %>
