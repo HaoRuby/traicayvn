@@ -1,0 +1,8 @@
+<h3><span>More Fruit</span></h3>
+<% if @product.taxons.present? %>
+  <ul class="list-group" id="similar_items_by_taxon" data-hook>
+    <% @product.taxons.each do |taxon| %>
+      <li class="list-group-item"><%= link_to taxon.name, seo_url(taxon) %></li>
+    <% end %>
+  </ul>
+<% end %>
