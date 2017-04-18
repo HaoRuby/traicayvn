@@ -10,6 +10,7 @@ body {
 	background-image: none;
 	background-color: #fff;
 	margin-bottom: 0px;
+	border-bottom: 1px solid #C4C4C4;
 	#logo {
 		margin-bottom: 0px;
 		margin-top: 7px;
@@ -254,6 +255,48 @@ body {
 	.info {
 		font-weight: 600;
 		font-size: 16px;
+	}
+}
+//---------------------------------------------------
+
+// buy fruit
+.page-title {
+	margin-top: 35px;
+	margin-left: 13px;
+	margin-right: 13px;
+	font-weight: 600;
+}
+.buy-fruit {
+	margin-top: 15px;
+	h3 {
+		margin-top: 10px;
+		span {
+			font-size: 20px;
+			font-weight: 600;
+			border-bottom: 2px solid #FF5603;
+			padding-bottom: 10px;
+		}
+	}
+	.show-product {
+		margin-top: 20px;
+		.panel {
+			border: none;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+		.panel-body {
+			border: 1px solid #ddd;
+			width: 255px;
+			height: 235px;
+		}
+		.btn-default {
+			border-radius: 0px;
+			&:hover {
+				background-color: #ff5603;
+				border: 1px solid #ff5603;
+				color: #fff;
+			}
+		}
 	}
 }
 //---------------------------------------------------
