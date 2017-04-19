@@ -23,7 +23,10 @@
           <li><i class="fa fa-phone color"></i><a href="#"><%= info.phone %></a></li>
         </ul>
       </div>
-      <div class="col-xs-6 text-right" id="cart">
+      <div class="col-xs-2 col-xs-offset-2">
+        <%= yield :brand %>
+      </div>
+      <div class="col-xs-2 text-right" id="cart">
         <ul data-hook>
           <li id="link-to-cart" data-hook>
             <noscript>
