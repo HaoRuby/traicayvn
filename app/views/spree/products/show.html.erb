@@ -43,6 +43,15 @@
               <%= product_description(@product) %>
             </div>
 
+            <div class="well plus">
+              <p>
+                <strong><%= @product.name %>: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                <strong>Serve: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                <strong>Shipping: </strong>5% <br>
+                <strong>Special: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quisquam, optio, sint sed ducimus temporibus.
+              </p>
+            </div>
+
             <div id="cart-form" data-hook="cart_form">
               <%= render :partial => 'cart_form' %>
             </div>

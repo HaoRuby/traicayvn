@@ -310,7 +310,92 @@ body {
 }
 #product-description {
 	h1 {
-		font-size: 24px !important;
+		font-size: 20px !important;
+		margin-bottom: 10px;
+		font-weight: 600;
+	}
+	span {
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.well {
+		margin-top: 20px;
+		padding: 0px;
+		background-color: #fff;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		margin-top: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #ddd;
+	}
+	.plus {
+		border-bottom: none;
+		padding-bottom: 0px;
+	}
+}
+#taxon-crumbs {
+	padding-bottom: 60px;
+	h3 {
+		font-size: 20px;
+		font-weight: 600;
+		margin-top: 40px;
+		span {
+			border-bottom: 2px solid #ff5603;
+			padding-bottom: 5px;
+		}
+	}
+	#similar_items_by_taxon {
+		margin-top: 30px;
+	}
+	.slick-slider {
+		margin-top: 30px;
+	}
+	.slick-slide {
+		border: 1px solid #ddd;
+		padding: 20px;
+		margin: 10px 10px 10px 0px;
+		img {
+			width: 100%;
+			border: 1px solid #ddd;
+			padding: 5px;
+		}
+	}
+	.slick-dots {
+		position: absolute;
+		bottom: -45px;
+		width: 100%;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		li {
+			position: relative;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin: 0px 0px;
+			padding: 0;
+			cursor: pointer;
+			button {
+				font-size: 0px;
+				line-height: 0px;
+				display: block;
+				width: 15px;
+				height: 15px;
+				padding: 5px;
+				cursor: pointer;
+				color: transparent;
+				border: 0;
+				outline: none;
+				background-color: #fff;
+				border-radius: 100%;
+				border: 1px solid #ddd;
+			}
+		}
+		.slick-active button {
+				background-color: #ff5603;
+		}
 	}
 }
 //---------------------------------------------------

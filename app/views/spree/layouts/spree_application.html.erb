@@ -7,8 +7,10 @@
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
     
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <script src="https://use.fontawesome.com/38125957c1.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
     <%= render partial: 'spree/shared/google_analytics.js' %>
@@ -33,5 +35,16 @@
     <footer id="footer">
       <%= render partial: 'spree/shared/footer' %>
     </footer>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.similar_items').slick({
+          slidesToShow: 5,
+          slidesToScroll: 5,
+          dots: true,
+          arrows: false
+        });
+      });
+    </script>
   </body>
 </html>

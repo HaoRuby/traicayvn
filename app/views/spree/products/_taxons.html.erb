@@ -1,8 +1,31 @@
 <h3><span>More Fruit</span></h3>
 <% if @product.taxons.present? %>
-  <ul class="list-group" id="similar_items_by_taxon" data-hook>
-    <% @product.taxons.each do |taxon| %>
-      <li class="list-group-item"><%= link_to taxon.name, seo_url(taxon) %></li>
+  <% similar_items = Array.new %>
+  <% @product.taxons.each do |taxon| %>
+    <% taxon.products.each do |item| %>
+      <% similar_items << item.id %>
     <% end %>
-  </ul>
+  <% end %>
+  <% carousel_indicators = 0 %>
+  <% number_of_items = similar_items.count %>
+  <% if number_of_items%5 == 0  %>
+    <% carousel_indicators = number_of_items/5 %>
+  <% else %>
+    <% carousel_indicators = number_of_items/5 + 1  %>
+  <% end  %>
+
+  <div class="similar_items">
+    <% similar_items.each do |item| %>
+      <div>
+        <% if defined?(image) && image %>
+          <%= image_tag image.attachment.url(:product), :itemprop => "image" %>
+        <% else %>
+          <%= product_image(Spree::Product.find(item), :itemprop => "image") %>
+        <% end %>
+        <span><%= Spree::Product.find(item).name %></span>
+        <span><%= display_price(Spree::Product.find(item)) %></span>
+      </div>
+    <% end %>
+  </div>
+
 <% end %>
