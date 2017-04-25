@@ -1,13 +1,14 @@
 module Spree
 	Address.class_eval do
-		validates :city, if: :require_city?
+		with_options presence: true do
+      validates :firstname, :lastname, :address1, :country
+      validates :zipcode, if: :require_zipcode?
+      validates :phone, if: :require_phone?
+    end
 
 		def require_zipcode?
       false
     end
 
-    def require_city?
-    	false
-    end
 	end
 end
